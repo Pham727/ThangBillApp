@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>thangbillapp</name>
+    </assembly>
+    <members>
+        <member name="F:thangbillapp.Utils.Constants.BASE_URL">
+            <summary>
+            base url
+            </summary>
+        </member>
+        <member name="F:thangbillapp.Utils.Constants.NAV_PRAM_PRODUCT_NAME">
+            <summary>
+            navigation parameter product name
+            </summary>
+        </member>
+        <member name="F:thangbillapp.Utils.Constants.WEB_API_KEY">
+            <summary>
+            web api key
+            </summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.CartViewModel.Products">
+            <inheritdoc cref="F:thangbillapp.ViewModels.CartViewModel.products"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.HomeViewModel.ExclusiveProducts">
+            <inheritdoc cref="F:thangbillapp.ViewModels.HomeViewModel.exclusiveProducts"/>
+        </member>
+        <member name="F:thangbillapp.ViewModels.HomeViewModel.productDetailCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.HomeViewModel.ProductDetailCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.HomeViewModel.ProductDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:thangbillapp.ViewModels.HomeViewModel.ProductDetail(thangbillapp.Models.Product)"/>.</summary>
+        </member>
+        <member name="F:thangbillapp.ViewModels.HomeViewModel.addProductCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.HomeViewModel.AddProductCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.HomeViewModel.AddProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:thangbillapp.ViewModels.HomeViewModel.AddProduct(thangbillapp.Models.Product)"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.ProductDetailViewModel.Product">
+            <inheritdoc cref="F:thangbillapp.ViewModels.ProductDetailViewModel.product"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.ImagePass">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignInViewModel.imagePass"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.IsShowPassWord">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignInViewModel.isShowPassWord"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.Email">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignInViewModel.email"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.Password">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignInViewModel.password"/>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignInViewModel.showPasswordCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignInViewModel.ShowPasswordCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.ShowPasswordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignInViewModel.ShowPassword"/>.</summary>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignInViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignInViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignInViewModel.SignIn"/>.</summary>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignInViewModel.signUpCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignInViewModel.SignUpCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignInViewModel.SignUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignInViewModel.SignUp"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.ImagePass">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignUpViewModel.imagePass"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.IsShowPassWord">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignUpViewModel.isShowPassWord"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.UserName">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignUpViewModel.userName"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.Email">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignUpViewModel.email"/>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.Password">
+            <inheritdoc cref="F:thangbillapp.ViewModels.SignUpViewModel.password"/>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignUpViewModel.showPasswordCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignUpViewModel.ShowPasswordCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.ShowPasswordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignUpViewModel.ShowPassword"/>.</summary>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignUpViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignUpViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignUpViewModel.SignIn"/>.</summary>
+        </member>
+        <member name="F:thangbillapp.ViewModels.SignUpViewModel.registerUserCommand">
+            <summary>The backing field for <see cref="P:thangbillapp.ViewModels.SignUpViewModel.RegisterUserCommand"/>.</summary>
+        </member>
+        <member name="P:thangbillapp.ViewModels.SignUpViewModel.RegisterUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:thangbillapp.ViewModels.SignUpViewModel.RegisterUser"/>.</summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.thangbillappApiServicesIApiService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.thangbillappApiServicesIApiService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.thangbillappApiServicesIApiService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.thangbillappApiServicesIApiService.GetAllProduct">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.thangbillappApiServicesIApiService.thangbillapp#ApiServices#IApiService#GetAllProduct">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

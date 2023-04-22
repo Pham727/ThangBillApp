@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thangbillapp.Views.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             Title="SignUpPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="30,100,0,0">
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="30" Padding="20,30,20,30">
+                <Image Source="icon_carrot.png" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50"/>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0,30,0,0" Spacing="10">
+                    <Label Text="Sign Up" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    <Label Text="Enter your credentials to continue" FontSize="17" TextColor="Gray" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <Label Text="Username" FontSize="16" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                        <Entry Text="{Binding UserName}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" TextColor="Black" FontSize="17"/>
+                    </StackLayout>
+                    <Line HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <Label Text="Email" FontSize="16" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                        <Entry Text="{Binding Email}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" TextColor="Black" FontSize="17"/>
+                    </StackLayout>
+                    <Line HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <Label Text="Password" FontSize="16" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Entry Text="{Binding Password}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" IsPassword="{Binding IsShowPassWord}" TextColor="Black" FontSize="17"/>
+                            <Image Source="{Binding ImagePass}" HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowPasswordCommand}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                    <Line HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+                    <Label HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Text="By continuing you argee to our Teams of Service and Privacy Policy." Margin="0,10,20,0" FontSize="16" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="20,20,20,0" Spacing="20">
+                <Button Text="Sign Up" Command="{Binding RegisterUserCommand}" TextColor="White" FontSize="20" CornerRadius="20" HeightRequest="60" HorizontalOptions="FillAndExpand" BackgroundColor="#53B175"/>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label Text="Already have an account? " TextColor="Black"/>
+                    <Label Text="Signin" TextColor="#53B175" FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SignInCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+
+            <Line HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0,0,0,20" WidthRequest="150" HeightRequest="3" BackgroundColor="Gray"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

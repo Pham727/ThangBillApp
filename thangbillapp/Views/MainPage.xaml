@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thangbillapp.Views.MainPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Image Source="cover_image.jpg" HeightRequest="300" Aspect="AspectFill" Rotation="180"/>
+            
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="10,30,10,10">
+                <Label Text="Get your groceries with nectar" WidthRequest="250" FontAttributes="Bold" TextColor="Black" FontSize="25" HorizontalOptions="Start"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="vietnam.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50"></Image>
+                    <Entry Placeholder="+84" PlaceholderColor="Black" TextColor="Black" FontSize="20"/>
+                </StackLayout>
+                <Line HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="20,50,20,0" Spacing="30">
+                <Label Text="Or connect with social media" HorizontalOptions="CenterAndExpand" TextColor="Gray"></Label>
+                <Button ImageSource="icon_google.png" Text="Continue With Google" ContentLayout="left" HeightRequest="60" BackgroundColor="#5383EC" FontSize="20" TextColor="#FCFCFC" CornerRadius="20"/>
+                <Button ImageSource="icons_facebook.png" Clicked="Button_Clicked" Text="Continue With Facebook" ContentLayout="left" HeightRequest="60" BackgroundColor="#4A66AC" FontSize="20" TextColor="#FCFCFC" CornerRadius="20"/>
+            </StackLayout>
+            
+            <Line HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0,0,0,20" WidthRequest="150" HeightRequest="3" BackgroundColor="Gray"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

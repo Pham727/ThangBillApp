@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thangbillapp.Views.CartPage"
+             Title="CartPage" 
+             xmlns:models="clr-namespace:thangbillapp.Models" 
+             xmlns:viewmodel="clr-namespace:thangbillapp.ViewModels" 
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="30" Padding="0,30,0,0">
+                <Label Text="My Cart" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="Black" FontAttributes="Bold" />
+                <Line HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                <CollectionView ItemsSource="{Binding Products}" ItemsLayout="VerticalList" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Product">
+                            <StackLayout Padding="20,0,20,0">
+                                <Grid HeightRequest="170">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" HeightRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                                    
+                                    <StackLayout Grid.Column="1" HorizontalOptions="FillAndExpand" Padding="20" Spacing="25">
+                                        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                                            <Label Text="{Binding ProductName}" FontSize="17" TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                            <Label Text="{Binding Weight}" FontSize="16" TextColor="Gray" HorizontalOptions="StartAndExpand" />
+                                        </StackLayout>
+                                        
+                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="15">
+                                            <ImageButton Source="icon_disable_subtract.png" HeightRequest="20" WidthRequest="20" BorderColor="Gray" CornerRadius="10" HorizontalOptions="Start" />
+                                            <Label Text="1" FontSize="17" VerticalOptions="Center" HorizontalOptions="Start" />
+                                            <ImageButton Source="icon_plus.png" HeightRequest="20" WidthRequest="20" BorderColor="Gray" CornerRadius="10" HorizontalOptions="Start" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2" HorizontalOptions="FillAndExpand" Padding="20" Spacing="60">
+                                        <Image Source="icon_close.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="EndAndExpand" />
+                                        <Label Text="{Binding Price}" FontSize="17" FontAttributes="Bold" HorizontalOptions="EndAndExpand" />
+                                    </StackLayout>
+                                </Grid>
+                                <Line HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+               
+            </StackLayout>
+            <StackLayout Margin="0,-80,0,0" HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+                <Button Text="Go to Checkout" Style="{StaticResource MainButton}"/>
+            </StackLayout>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

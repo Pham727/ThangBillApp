@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thangbillapp.Views.ProductDetailPage"
+             Shell.NavBarIsVisible="False"
+             Title="ProductDetailPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Border HorizontalOptions="FillAndExpand" HeightRequest="370" Background="#F2F3F2" Padding="20,10,20,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,20,20" />
+                </Border.StrokeShape>
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="20">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <ImageButton Source="icon_left.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="StartAndExpand"/>
+                        <ImageButton Source="icon_upload.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Image Source="{Binding Product.Image}" Aspect="Fill" HorizontalOptions="FillAndExpand" HeightRequest="250"/>
+                    <Label Text=". . ." FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Border>
+            <StackLayout HorizontalOptions="FillAndExpand" Spacing="20" Padding="20">
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="5">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="{Binding Product.Name}" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                        <Image Source="icon_favorite.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Label Text="{Binding Product.Weight}" FontSize="16" TextColor="Gray"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="5">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="10">
+                            <Image Source="icon_disable_subtract.png" HeightRequest="30" WidthRequest="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                            <Frame HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Padding="0">
+                                <Label Text="1" FontSize="17" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                            </Frame>
+                            <Image Source="icon_plus.png" HeightRequest="30" WidthRequest="30" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <Label Text="{Binding Product.Price}" FontSize="17" FontAttributes="Bold" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="5">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Product Detail" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                        <Image Source="icon_right.png" HeightRequest="20" Aspect="AspectFill" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Label Text="{Binding Product.Describe}" FontSize="16" TextColor="Gray"></Label>
+                    <Line HeightRequest="1" HorizontalOptions="Fill" Background="gray" Margin="0,10,0,0"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="5">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Review" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                        <Image Source="icon_right.png" HeightRequest="20" Aspect="AspectFill" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text="Add to Cart" FontAttributes="Bold" FontSize="18" TextColor="White" BackgroundColor="#53B175" CornerRadius="15" HeightRequest="60"/>
+                <Line HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="3" BackgroundColor="Gray"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

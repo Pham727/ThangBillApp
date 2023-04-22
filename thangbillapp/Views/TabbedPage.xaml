@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="thangbillapp.Views.TabPage" 
+            xmlns:local="clr-namespace:thangbillapp.Views" 
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls" 
+            android:TabbedPage.ToolbarPlacement="Bottom" 
+            BarTextColor="Black" 
+            BarBackgroundColor="#E5E5E5"
+            SelectedTabColor="#53B175"
+            UnselectedTabColor="Black"
+            Shell.NavBarHasShadow="False">
+    <!--<local:HomePage Title="Shop" IconImageSource="icon_shop.png"/>
+    <local:CartPage Title="Cart" IconImageSource="icon_buying.png"/>
+    <local:SignInPage Title="Favorite" IconImageSource="icon_favorite.png" />
+    <local:SignUpPage Title="Account" IconImageSource="icon_account.png" />-->
+</TabbedPage>

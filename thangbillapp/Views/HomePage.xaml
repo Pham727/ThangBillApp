@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="thangbillapp.Views.HomePage" 
+             xmlns:models="clr-namespace:thangbillapp.Models" 
+             xmlns:viewmodel="clr-namespace:thangbillapp.ViewModels" 
+             Title="HomePage" 
+             Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="20,30,20,0" Spacing="20">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <Image Source="icon_carrot.png" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="10">
+                            <Image Source="icon_visit.png" HeightRequest="30" WidthRequest="30" VerticalOptions="CenterAndExpand" />
+                            <Label Text="Ho Chi Minh, Viet Nam" TextColor="Black" VerticalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Frame HorizontalOptions="FillAndExpand" HeightRequest="65" CornerRadius="15" BackgroundColor="#F2F3F2" BorderColor="Transparent" Padding="20,10,20,10">
+                        <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="10">
+                            <Image Source="icon_search.png" HeightRequest="30" WidthRequest="30" />
+                            <Entry Placeholder="Search Store" PlaceholderColor="Gray" />
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Image Source="banner_2.jpg" HeightRequest="150" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Label Text="Exclusive Offer" TextColor="Black" FontAttributes="Bold" FontSize="19" HorizontalOptions="StartAndExpand" />
+                            <Label Text="See all" TextColor="#53B175" FontSize="16" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Button Text="Text" Command="{Binding AddProductCommand}" />
+
+                    <CollectionView ItemsSource="{Binding ExclusiveProducts}" ItemsLayout="HorizontalList" HorizontalOptions="FillAndExpand">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Product">
+                                <Frame CornerRadius="20" Margin="0,0,10,0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=ProductDetailCommand}" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Spacing="20">
+                                        <Image Source="{Binding Image}" HeightRequest="100" WidthRequest="150" Aspect="AspectFill" />
+                                        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                                            <Label Text="{Binding ProductName}" TextColor="Black" FontSize="16" FontAttributes="Bold" />
+                                            <Label Text="{Binding Weight}" TextColor="Gray" FontSize="15" />
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                            <Label Text="{Binding Price}" FontSize="16" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                                            <ImageButton Source="icon_add.png" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AddProductCommand}" CommandParameter="{Binding .}" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" HorizontalOptions="EndAndExpand" CornerRadius="10"></ImageButton>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Label Text="Best Selling" TextColor="Black" FontAttributes="Bold" FontSize="19" HorizontalOptions="StartAndExpand" />
+                            <Label Text="See all" TextColor="#53B175" FontSize="16" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <CollectionView ItemsSource="{Binding ExclusiveProducts}" ItemsLayout="HorizontalList" HorizontalOptions="FillAndExpand">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Product">
+                                <Frame CornerRadius="20" Margin="0,0,10,0">
+                                    <StackLayout Spacing="20">
+                                        <Image Source="{Binding Image}" HeightRequest="100" WidthRequest="150" Aspect="AspectFill" />
+                                        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+                                            <Label Text="{Binding ProductName}" TextColor="Black" FontSize="16" FontAttributes="Bold" />
+                                            <Label Text="{Binding Weight}" TextColor="Gray" FontSize="15" />
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                            <Label Text="{Binding Price}" FontSize="16" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                                            <ImageButton Source="icon_add.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" HorizontalOptions="EndAndExpand" CornerRadius="10"></ImageButton>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
